@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import SearchBox from './SearchBox';
 import ListBooks from './ListBooks';
+import BookInfo from './BookInfo';
+
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
@@ -14,7 +16,7 @@ class App extends Component {
               </div>
 
               <Route path="/listBooks/:info" component = {ListBooks}   />
-              <Route path="/bookDetails" component = {BookInfo} />
+              <Route path="/bookDetails/:bookInfo" component = {BookInfo} />
             </div>
           </Router>
 
