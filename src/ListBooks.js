@@ -41,7 +41,7 @@ render() {
        params = {{
          info : parseInt(book.id[0]._)
        }}
-       ><img src={book.best_book[0].image_url} alt="no image"/></Link>
+       ><img src={book.best_book[0].image_url} alt="no"/></Link>
        <div className="bookTitle" key={book.id}>{book.best_book[0].title}</div>
     </div>
 
