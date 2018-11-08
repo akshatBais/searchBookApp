@@ -36,7 +36,7 @@ render() {
 
   const listBooks = this.state.info.map((book) =>
 
-    <div className="BookDetails">
+    <div id="BookDetails" className="col-sm-4">
        <Link to={"/bookDetails/"+ parseInt(book.id[0]._)}
        params = {{
          info : parseInt(book.id[0]._)

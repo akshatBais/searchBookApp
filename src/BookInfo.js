@@ -10,7 +10,8 @@ class BookInfo extends React.Component {
       data : '',
       authors : [],
       description : '',
-      avg_rating : ''
+      avg_rating : '',
+      book_img : ''
 
     };
     this.getBookDescription();

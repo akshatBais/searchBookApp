@@ -2,7 +2,6 @@ import React from 'react';
 import BookDetails from './BookDetails';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-
 class FetchData extends React.Component{
 
   constructor(props) {
@@ -21,9 +20,6 @@ class FetchData extends React.Component{
 
 
   }
-
-
-
 
   render() {
     console.log(this.props.info[0]);
@@ -52,7 +48,6 @@ class FetchData extends React.Component{
 
       <div className="BookDetails">
           {listBooks}
-
       </div>
     );
 

@@ -1,24 +1,22 @@
 
 .App-header {
+  padding-top: 1rem!important;
   background-color: #282c34;
-  min-height: 20vh;
+  min-height: 30vh;
   display: flex;
   justify-content: center;
   color: white;
 
 }
 
-.message {
-  text-align: center;
-  padding-top: 2rem!important;
-}
 
-.searchBox ,.App  {
+
+ .App  {
   padding-top: 0.5rem!important;
   text-align: center;
 }
 
-.BookDetails, .BookInformation , .searchBox {
+.col-sm-4, .BookInformation  {
   padding-top: 3rem!important;
   text-align: center;
   padding: 0px 10px;

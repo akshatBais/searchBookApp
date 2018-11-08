@@ -24,19 +24,13 @@ class SearchBox extends Component {
 
       <div className="App">
         <header className="App-header">
-            <div className="message">
-              Search any book
-            </div>
             <div className="searchBox">
-              <label>
+             Welcome to BetterReads !! <br />Search the book <br /> <br />
                 <input type="text" ref={this.book}  onChange={this.handleChange}/>
-              </label>
               <button>
-
                   <Link to={
                     "/listBooks/" + this.state.value
                   }
-
                   params = {{
                       info : this.book
                     }}

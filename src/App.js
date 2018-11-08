@@ -11,7 +11,7 @@ class App extends Component {
     return (
           <Router>
             <div>
-              <div className="row">
+              <div className="rowspan 12">
                 <SearchBox/>
               </div>
 
