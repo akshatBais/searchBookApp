@@ -18,7 +18,7 @@
   text-align: center;
 }
 
-.BookDetails {
+.BookDetails, .BookInformation {
   padding-top: 3rem!important;
   text-align: center;
   padding: 0px 10px;

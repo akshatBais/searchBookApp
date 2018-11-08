@@ -37,17 +37,13 @@ render() {
   const listBooks = this.state.info.map((book) =>
 
     <div className="BookDetails">
-       <Link to={
-         "/bookDetails/" + JSON.stringify(book.id[0]._)
-       }
+       <Link to={"/bookDetails/"+ parseInt(book.id[0]._)}
        params = {{
-           bookInfo :JSON.stringify(book.id[0]._)
-         }}
+         info : parseInt(book.id[0]._)
+       }}
        ><img src={book.best_book[0].image_url} alt="no image"/></Link>
        <div className="bookTitle" key={book.id}>{book.best_book[0].title}</div>
     </div>
-
-
 
 );
 

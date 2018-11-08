@@ -16,7 +16,8 @@ class App extends Component {
               </div>
 
               <Route path="/listBooks/:info" component = {ListBooks}   />
-              
+              <Route path="/bookDetails/:info" component = {BookInfo}   />
+
             </div>
           </Router>
 
