@@ -13,12 +13,12 @@
   padding-top: 2rem!important;
 }
 
-.searchBox {
+.searchBox ,.App  {
   padding-top: 0.5rem!important;
   text-align: center;
 }
 
-.BookDetails, .BookInformation {
+.BookDetails, .BookInformation , .searchBox {
   padding-top: 3rem!important;
   text-align: center;
   padding: 0px 10px;
