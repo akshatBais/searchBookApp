@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The following project is a search app based og Good Reads API . 
 
 ## Available Scripts
 
