@@ -34,7 +34,7 @@ class SearchBox extends Component {
               <button>
 
                   <Link to={
-                    "/bookDetails/" + this.state.value
+                    "/listBooks/" + this.state.value
                   }
 
                   params = {{
