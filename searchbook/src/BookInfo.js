@@ -8,7 +8,7 @@ class BookInfo extends React.Component {
     super(props);
     this.state = {
       data : '',
-      info : []
+      info : [  ]
     };
     this.showData();
   }
@@ -28,11 +28,7 @@ class BookInfo extends React.Component {
 
 
   render() {
-    const listBooks = this.state.info.map(book =>
-      if((this.props.match.params.bookInfo).equals(book.id[0]._) {
-
-      }
-    )
+  
     console.log(this.props.match.params.bookInfo);
     return (
       <div>reading book information

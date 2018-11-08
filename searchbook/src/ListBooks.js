@@ -41,7 +41,7 @@ render() {
          "/bookDetails/" + JSON.stringify(book.id[0]._)
        }
        params = {{
-           bookInfo : book.id[0]
+           bookInfo :JSON.stringify(book.id[0]._)
          }}
        ><img src={book.best_book[0].image_url} alt="no image"/></Link>
        <div className="bookTitle" key={book.id}>{book.best_book[0].title}</div>
