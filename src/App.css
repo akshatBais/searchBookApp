@@ -9,6 +9,22 @@
 
 }
 
+.card {
+  width : 70%;
+  height: 90%;
+
+}
+
+.card-img-top {
+  width : 70% %;
+  height : 0%;
+}
+
+.row {
+  padding-left: 4rem;
+  padding-top: 2rem
+}
+
  .App  {
 
   text-align: center;

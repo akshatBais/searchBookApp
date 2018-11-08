@@ -12,14 +12,10 @@ class ListBooks extends React.Component{
       data : '',
       info : []
     };
-    this.getData();
   }
 
-componentDidMount() {
+componentWillMount() {
   console.log( this.props.match.params.info);
-}
-
-getData() {
   axios.get('https://www.goodreads.com/search/index.xml?key=LsvXe6tyOcFzGePEMDiw&q='+ this.props.match.params.info)
   .then(resp=> {
     this.setState({data : resp.data});
@@ -32,35 +28,33 @@ getData() {
 }
 
 
+
 render() {
 
   const listBooks = this.state.info.map((book) =>
-
-    <div id="BookDetails">
-       <div  className="col-sm-4">
-       <Link to={"/bookDetails/"+ parseInt(book.id[0]._)}
-       params = {{
-         info : parseInt(book.id[0]._)
-       }}
-       >
-       <img src={book.best_book[0].image_url} alt="no"/>
-          <div className="bookTitle" key={book.id}><strong>
-          {book.best_book[0].title}</strong> <br /> </div></Link>
-          by {book.best_book[0].author[0].name}
-          
-
-       </div>
+   <div  className="col-sm-3">
+          <div class="card">
+              <Link to={"/bookDetails/"+ parseInt(book.id[0]._)}
+              params = {{
+                info : parseInt(book.id[0]._)
+              }}
+              >
+                <img class="card-img-top" src={book.best_book[0].image_url} alt="no"/>
+                <h6 class="card-title">
+                  {book.best_book[0].title}
+                </h6>
+              </Link>
+          </div>
     </div>
+
+
 
 );
 
   return (
-
-      <div>{listBooks}</div>
-
+      <div className="row">{listBooks}</div>
   );
 }
-
 }
 
 

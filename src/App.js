@@ -14,7 +14,6 @@ class App extends Component {
               <div className="rowspan 12">
                 <SearchBox/>
               </div>
-
               <Route path="/listBooks/:info" component = {ListBooks}   />
               <Route path="/bookDetails/:info" component = {BookInfo}   />
 
