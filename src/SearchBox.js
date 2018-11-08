@@ -12,7 +12,6 @@ class SearchBox extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-
     handleChange(event) {
       this.book=event.target.value;
       this.setState({value : this.book});
@@ -25,8 +24,8 @@ class SearchBox extends Component {
       <div className="App">
         <header className="App-header">
             <div className="searchBox">
-             Welcome to BetterReads !! <br />Search the book <br /> <br />
-                <input type="text" ref={this.book}  onChange={this.handleChange}/>
+             Welcome to BetterReads !!  <br /> <br />
+                <input type="text" ref={this.book}  placeholder="search books" onChange={this.handleChange}/>
               <button>
                   <Link to={
                     "/listBooks/" + this.state.value

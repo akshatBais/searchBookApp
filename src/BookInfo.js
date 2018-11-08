@@ -49,12 +49,14 @@ getBookDescription() {
     return (
     <div className="BookInformation">
       <div className="Description">
-        {this.state.description}
+        Description : <td />{this.state.description}
       </div>
       <div className="Authors">
+      Authors : <td />
         {authors}
       </div>
       <div className="AvgRating">
+      Rating : <td/>
         {this.state.avg_rating}
       </div>
 

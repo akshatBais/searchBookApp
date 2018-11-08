@@ -36,13 +36,20 @@ render() {
 
   const listBooks = this.state.info.map((book) =>
 
-    <div id="BookDetails" className="col-sm-4">
+    <div id="BookDetails">
+       <div  className="col-sm-4">
        <Link to={"/bookDetails/"+ parseInt(book.id[0]._)}
        params = {{
          info : parseInt(book.id[0]._)
        }}
-       ><img src={book.best_book[0].image_url} alt="no"/></Link>
-       <div className="bookTitle" key={book.id}>{book.best_book[0].title}</div>
+       >
+       <img src={book.best_book[0].image_url} alt="no"/>
+          <div className="bookTitle" key={book.id}><strong>
+          {book.best_book[0].title}</strong> <br /> </div></Link>
+          by {book.best_book[0].author[0].name}
+          
+
+       </div>
     </div>
 
 );
