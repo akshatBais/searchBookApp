@@ -29,7 +29,8 @@ getBookDescription() {
        this.setState({
          authors : this.state.data.GoodreadsResponse.book[0].authors,
          description : this.state.data.GoodreadsResponse.book[0].description,
-         avg_rating : this.state.data.GoodreadsResponse.book[0].average_rating
+         avg_rating : this.state.data.GoodreadsResponse.book[0].average_rating,
+         book_img : this.state.data.GoodreadsResponse.book[0].image_url[0]
        });
        console.log(this.state.authors);
        console.log(this.state.description);
@@ -47,21 +48,23 @@ getBookDescription() {
       "getting the information for book id : " + parseInt(this.props.match.params.info)
     );
     return (
-    <div className="BookInformation">
-      <div className="Description">
-        Description : <td />{this.state.description}
-      </div>
+  <div>
+    <div className="row">
+    </div>
+
+    <div className="row">
+    <div className="col-sm-4">
       <div className="Authors">
       Authors : <td />
         {authors}
       </div>
-      <div className="AvgRating">
-      Rating : <td/>
-        {this.state.avg_rating}
-      </div>
-
-
     </div>
+    <div className="AvgRating">
+    Rating : <td/>
+      {this.state.avg_rating}
+    </div>
+    </div>
+  </div>
   );
   }
 }
