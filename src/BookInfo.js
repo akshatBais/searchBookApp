@@ -50,20 +50,17 @@ getBookDescription() {
     return (
   <div>
     <div className="row">
+        <div className="col-sm-4">
+            <img src={this.state.book_img} alt="book image"/>
+            <br /> by   {authors} <br />  {this.state.avg_rating}
+        </div>
+        <div className="col-sm-6">
+        <br /><br />
+          {this.state.description}
+        </div>
     </div>
 
-    <div className="row">
-    <div className="col-sm-4">
-      <div className="Authors">
-      Authors : <td />
-        {authors}
-      </div>
-    </div>
-    <div className="AvgRating">
-    Rating : <td/>
-      {this.state.avg_rating}
-    </div>
-    </div>
+
   </div>
   );
   }
