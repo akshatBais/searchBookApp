@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/searchBookApp/precache-manifest.ebcfa150c027c278dcd9ae0eeeae97e8.js"
+  "/searchBookApp/precache-manifest.c5733b3880c987db5a10eb4989310b5b.js"
 );
 
 workbox.clientsClaim();
