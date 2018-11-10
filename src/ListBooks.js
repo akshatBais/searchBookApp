@@ -21,7 +21,7 @@ class ListBooks extends React.Component{
     }
 
   componentWillMount() {
-    console.log("Calling Component will Mount method");
+//    console.log("Calling Component will Mount method");
     if ( this.data.bookName !== this.props.match.params.info || this.data.bookName === '') {
       this.getRequiredData();
     }
@@ -30,14 +30,11 @@ class ListBooks extends React.Component{
 
 
   componentWillUpdate() {
-    console.log("Calling componentWillUpdate method");
+//    console.log("Calling componentWillUpdate method");
     console.log("Book keyword searched is : "+this.props.match.params.info);
     if ( this.data.bookName !== this.props.match.params.info || this.data.bookName === '') {
       this.getRequiredData();
     }
-
-    this.count ++;
-    console.log(this.count);
     if(this.data.bookName !== this.props.match.params) {
     this.data.bookName = this.props.match.params.info;
     }
@@ -45,7 +42,7 @@ class ListBooks extends React.Component{
   }
 
   getRequiredData() {
-    console.log("Earlier and Current data : "+this.data.bookName+" and "+this.props.match.params.info);
+  //  console.log("Earlier and Current data : "+this.data.bookName+" and "+this.props.match.params.info);
       console.log("Getting the required details");
       axios.get('https://www.goodreads.com/search/index.xml?key=LsvXe6tyOcFzGePEMDiw&q='+ this.props.match.params.info)
       .then(resp=> {
