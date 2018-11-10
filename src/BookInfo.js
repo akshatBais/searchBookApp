@@ -11,7 +11,8 @@ class BookInfo extends React.Component {
       authors : [],
       description : '',
       avg_rating : '',
-      book_img : ''
+      book_img : '',
+      bookName : ''
 
     };
     this.getBookDescription();
@@ -22,19 +23,14 @@ getBookDescription() {
   axios.get('https://www.goodreads.com/book/show/'+this.props.match.params.info+'.xml?key=LsvXe6tyOcFzGePEMDiw')
   .then(resp=> {
     console.log(resp);
-    this.setState({data : resp.data});
-      parseString(this.state.data, (err, result) => {
+      parseString(resp.data, (err, result) => {
         console.log(result);
-       this.setState({data : result});
        this.setState({
-         authors : this.state.data.GoodreadsResponse.book[0].authors,
-         description : this.state.data.GoodreadsResponse.book[0].description,
-         avg_rating : this.state.data.GoodreadsResponse.book[0].average_rating,
-         book_img : this.state.data.GoodreadsResponse.book[0].image_url[0]
+         authors : result.GoodreadsResponse.book[0].authors,
+         description : result.GoodreadsResponse.book[0].description,
+         avg_rating : result.GoodreadsResponse.book[0].average_rating,
+         book_img : result.GoodreadsResponse.book[0].image_url[0]
        });
-       console.log(this.state.authors);
-       console.log(this.state.description);
-       console.log(this.state.avg_rating);
      });
   });
 }
@@ -51,16 +47,15 @@ getBookDescription() {
   <div>
     <div className="row">
         <div className="col-sm-4">
-            <img src={this.state.book_img} alt="book image"/>
+            <img src={this.state.book_img} alt="book"/>
             <br /> by   {authors} <br />  {this.state.avg_rating}
         </div>
         <div className="col-sm-6">
         <br /><br />
+          {}
           {this.state.description}
         </div>
     </div>
-
-
   </div>
   );
   }
