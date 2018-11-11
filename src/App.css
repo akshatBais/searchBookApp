@@ -1,12 +1,24 @@
 
-.App-header {
+.App-header, .welcome {
   padding-top: 1rem!important;
+  padding-bottom: 1rem!important;
   background-color: #282c34;
-  min-height: 40vh;
+
+  background: url("book3.jpeg") no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+
+  min-height: 10vh;
   display: flex;
   justify-content: center;
   color: white;
 
+}
+
+a {
+  color:#282c34;
 }
 
 .card {

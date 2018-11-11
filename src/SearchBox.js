@@ -27,9 +27,9 @@ class SearchBox extends Component {
       <div className="App">
         <header className="App-header">
             <div className="searchBox">
-             Welcome to BetterReads !!  <br /><i>-akshat singh bais</i><br /> <br />
-                <input type="text" ref={(val) => this.book = val}  placeholder="search books" onChange={this.handleChange}/>
-              <button>
+                <input className="textBox" type="text" ref={(val) => this.book = val}  placeholder="search books" onChange={this.handleChange}/>
+                
+                <button>
                   <Link to={ "/listBooks/" + this.state.value  }
                   params = {{ info : this.state.value }}
                   > Search

@@ -22,7 +22,7 @@ getBookDescription() {
   console.log("Loading Data");
   axios.get('https://www.goodreads.com/book/show/'+this.props.match.params.info+'.xml?key=LsvXe6tyOcFzGePEMDiw')
   .then(resp=> {
-    console.log(resp);
+
       parseString(resp.data, (err, result) => {
         console.log(result);
        this.setState({
