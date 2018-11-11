@@ -29,8 +29,10 @@ getBookDescription() {
          authors : result.GoodreadsResponse.book[0].authors,
          description : result.GoodreadsResponse.book[0].description,
          avg_rating : result.GoodreadsResponse.book[0].average_rating,
-         book_img : result.GoodreadsResponse.book[0].image_url[0]
+         book_img : result.GoodreadsResponse.book[0].image_url[0],
+         bookName : result.GoodreadsResponse.book[0].title
        });
+
      });
   });
 }
@@ -52,7 +54,8 @@ getBookDescription() {
         </div>
         <div className="col-sm-6">
         <br /><br />
-          {}
+          <strong><h4>{this.state.bookName}</h4></strong>
+          <br /><br />
           {this.state.description}
         </div>
     </div>
