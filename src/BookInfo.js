@@ -48,14 +48,16 @@ getBookDescription() {
     return (
   <div>
     <div className="row">
-        <div className="col-sm-4">
+        <div id="book_mg" className="col-sm-4">
             <img src={this.state.book_img} alt="book"/>
-            <br /> by   {authors} <br />  {this.state.avg_rating}
+
         </div>
         <div className="col-sm-6">
         <br /><br />
-          <strong><h4>{this.state.bookName}</h4></strong>
-          <br /><br />
+          <strong><h3>{this.state.bookName}</h3></strong>
+          <br />
+           by <b>  {authors} </b> <strong>Average Rating : </strong> {this.state.avg_rating}
+          <br /><br/>
           {this.state.description}
         </div>
     </div>
