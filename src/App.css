@@ -9,10 +9,15 @@
 
 }
 
-.card, .book_img {
+.card {
   width : 70%;
   height: 90%;
 
+}
+
+.book_img {
+  width : 60%;
+  height : 50%;
 }
 
 .card-img-top {
