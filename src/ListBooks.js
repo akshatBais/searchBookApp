@@ -62,9 +62,9 @@ class ListBooks extends React.Component{
     const listBooks = this.state.info.map((book) =>
      <div  className="col-sm-3" key={book.id[0]._}>
             <div className="card">
-                <Link to={"/bookDetails/"+ parseInt(book.id[0]._)}
+                <Link to={"/bookDetails/"+ parseInt(book.best_book[0].id[0]._)}
                 params = {{
-                  info : parseInt(book.id[0]._)
+                  info : parseInt(book.best_book[0].id[0]._)
                 }}
                 >
                   <img className="card-img-top" src={book.best_book[0].image_url} alt="no"/>
