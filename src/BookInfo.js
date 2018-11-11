@@ -48,8 +48,8 @@ getBookDescription() {
     return (
   <div>
     <div className="row">
-        <div id="book_mg" className="col-sm-4">
-            <img src={this.state.book_img} alt="book"/>
+        <div className="col-sm-4">
+            <img className= "book_img" src={this.state.book_img} alt="book"/>
 
         </div>
         <div className="col-sm-6">
