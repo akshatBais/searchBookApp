@@ -58,7 +58,8 @@ getBookDescription() {
           <br />
            by <b>  {authors} </b> <strong>Average Rating : </strong> {this.state.avg_rating}
           <br /><br/>
-          {this.state.description}
+          <div dangerouslySetInnerHTML={{ __html: this.state.description }} />
+
         </div>
     </div>
   </div>
