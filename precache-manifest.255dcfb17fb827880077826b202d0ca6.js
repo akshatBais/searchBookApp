@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/searchBookApp/static/js/runtime~main.336aca02.js"
   },
   {
-    "revision": "3997b1af604473e71cb9",
-    "url": "/searchBookApp/static/js/main.3997b1af.chunk.js"
+    "revision": "b52140e7cc84efb34deb",
+    "url": "/searchBookApp/static/js/main.b52140e7.chunk.js"
   },
   {
     "revision": "a0dbd736af103ec6dfa0",
     "url": "/searchBookApp/static/js/1.a0dbd736.chunk.js"
   },
   {
-    "revision": "3997b1af604473e71cb9",
-    "url": "/searchBookApp/static/css/main.7b884593.chunk.css"
+    "revision": "b52140e7cc84efb34deb",
+    "url": "/searchBookApp/static/css/main.c35f7561.chunk.css"
   },
   {
-    "revision": "419b4163c796d827ca60d751739a5f74",
+    "revision": "3e4e1cb3240a206d8162d44d7c125c36",
     "url": "/searchBookApp/index.html"
   }
 ];
