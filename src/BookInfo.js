@@ -1,6 +1,7 @@
 import React from "react";
 import axios from 'axios';
 import {parseString} from 'xml2js';
+import request from 'sync-request';
 
 class BookInfo extends React.Component {
 
@@ -15,29 +16,41 @@ class BookInfo extends React.Component {
       bookName : ''
 
     };
-    this.getBookDescription();
+
+    this.data = {
+      info : []
+    };
+
   }
 
-getBookDescription() {
-  console.log("Loading Data");
-  axios.get('https://www.goodreads.com/book/show/'+this.props.match.params.info+'.xml?key=LsvXe6tyOcFzGePEMDiw')
-  .then(resp=> {
 
-      parseString(resp.data, (err, result) => {
-        console.log(result);
-       this.setState({
-         authors : result.GoodreadsResponse.book[0].authors,
-         description : result.GoodreadsResponse.book[0].description,
-         avg_rating : result.GoodreadsResponse.book[0].average_rating,
-         book_img : result.GoodreadsResponse.book[0].image_url[0],
-         bookName : result.GoodreadsResponse.book[0].title
+componentWillMount() {
+  console.log("component will mount");
+  console.log("Loading Data in getBookDescription");
+  console.log(this.props.match.params.info);
+  var rep = request('GET','/getDetails?q='+parseInt(this.props.match.params.info));
+  this.data.info = JSON.parse(rep.getBody());
+  console.log(this.data.info);
+
+  this.setState({
+         authors : this.data.info.GoodreadsResponse.book[0].authors,
+         description :JSON.parse(rep.getBody()).GoodreadsResponse.book[0].description[0],
+         avg_rating : this.data.info.GoodreadsResponse.book[0].average_rating,
+         book_img : this.data.info.GoodreadsResponse.book[0].image_url[0],
+         bookName : this.data.info.GoodreadsResponse.book[0].title
        });
-
-     });
-  });
 }
 
+componentDidMount() {
+  this._isMount = true;
+  console.log("Component is mounted");
+}
 
+componentWillUnmount() {
+
+this._isMount = false;
+console.log("component will unmount");
+}
   render() {
     const authors = this.state.authors.map(author =>
         <div className="authorName">{author.author[0].name}</div>
