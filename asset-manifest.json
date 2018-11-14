@@ -1,14 +1,14 @@
 {
-  "main.css": "/searchBookApp/static/css/main.fdfe5594.chunk.css",
-  "main.js": "/searchBookApp/static/js/main.6cf627c4.chunk.js",
-  "main.js.map": "/searchBookApp/static/js/main.6cf627c4.chunk.js.map",
-  "static/js/1.f043fba4.chunk.js": "/searchBookApp/static/js/1.f043fba4.chunk.js",
-  "static/js/1.f043fba4.chunk.js.map": "/searchBookApp/static/js/1.f043fba4.chunk.js.map",
+  "main.css": "/searchBookApp/static/css/main.6db364b0.chunk.css",
+  "main.js": "/searchBookApp/static/js/main.2a8f82c0.chunk.js",
+  "main.js.map": "/searchBookApp/static/js/main.2a8f82c0.chunk.js.map",
+  "static/js/1.a0dbd736.chunk.js": "/searchBookApp/static/js/1.a0dbd736.chunk.js",
+  "static/js/1.a0dbd736.chunk.js.map": "/searchBookApp/static/js/1.a0dbd736.chunk.js.map",
   "runtime~main.js": "/searchBookApp/static/js/runtime~main.336aca02.js",
   "runtime~main.js.map": "/searchBookApp/static/js/runtime~main.336aca02.js.map",
   "static/media/App.css": "/searchBookApp/static/media/book3.44982376.jpeg",
-  "static/css/main.fdfe5594.chunk.css.map": "/searchBookApp/static/css/main.fdfe5594.chunk.css.map",
+  "static/css/main.6db364b0.chunk.css.map": "/searchBookApp/static/css/main.6db364b0.chunk.css.map",
   "index.html": "/searchBookApp/index.html",
-  "precache-manifest.5b5cc191ba2bcfb3f228939dadf505fa.js": "/searchBookApp/precache-manifest.5b5cc191ba2bcfb3f228939dadf505fa.js",
+  "precache-manifest.169029fb728fcfd869e0e01e66f42fd5.js": "/searchBookApp/precache-manifest.169029fb728fcfd869e0e01e66f42fd5.js",
   "service-worker.js": "/searchBookApp/service-worker.js"
 }
