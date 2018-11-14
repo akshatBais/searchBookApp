@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import { parseString } from 'xml2js';
 import { Link } from "react-router-dom";
+import fetch from "node-fetch";
+import request from 'sync-request';
 
 class ListBooks extends React.Component{
 
@@ -44,21 +46,18 @@ class ListBooks extends React.Component{
   getRequiredData() {
   //  console.log("Earlier and Current data : "+this.data.bookName+" and "+this.props.match.params.info);
       console.log("Getting the required details");
-      axios.get('https://www.goodreads.com/search/index.xml?key=LsvXe6tyOcFzGePEMDiw&q='+ this.props.match.params.info)
-      .then(resp=> {
-          parseString(resp.data, (err, result) => {
-            console.log(result);
-          // this.data.info = this.data.detailsinXML.GoodreadsResponse.search[0].results[0].work;
-           this.setState({info : result.GoodreadsResponse.search[0].results[0].work});
-           console.log("getting the required information in state : "+this.state.info);
-         });
-      });
+
+        var rep = request('GET','/getBooks?q='+this.props.match.params.info);
+        console.log(JSON.parse(rep.getBody()));
+        this.setState({info : JSON.parse(rep.getBody())});
+        console.log(this.state.info);
+
   }
 
 
   render() {
 
-
+console.log(this.state.info);
     const listBooks = this.state.info.map((book) =>
      <div  className="col-sm-3" key={book.id[0]._}>
             <div className="card">
