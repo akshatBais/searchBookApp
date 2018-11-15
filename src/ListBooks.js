@@ -47,7 +47,7 @@ class ListBooks extends React.Component{
   //  console.log("Earlier and Current data : "+this.data.bookName+" and "+this.props.match.params.info);
       console.log("Getting the required details");
 
-        var rep = request('GET','/getBooks?q='+this.props.match.params.info);
+        var rep = request('GET','https://searchbookapp.herokuapp.com/getBooks?q='+this.props.match.params.info);
         console.log(JSON.parse(rep.getBody()));
         this.setState({info : JSON.parse(rep.getBody())});
         console.log(this.state.info);

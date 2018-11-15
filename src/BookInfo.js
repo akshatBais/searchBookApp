@@ -28,7 +28,7 @@ componentWillMount() {
   console.log("component will mount");
   console.log("Loading Data in getBookDescription");
   console.log(this.props.match.params.info);
-  var rep = request('GET','/getDetails?q='+parseInt(this.props.match.params.info));
+  var rep = request('GET','https://searchbookapp.herokuapp.com/getDetails?q='+parseInt(this.props.match.params.info));
   this.data.info = JSON.parse(rep.getBody());
   console.log(this.data.info);
 
