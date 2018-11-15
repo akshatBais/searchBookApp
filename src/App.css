@@ -17,6 +17,11 @@
 
 }
 
+
+.col-sm-4 {
+  text-align: center;
+}
+
 a {
   color:#282c34;
 }
@@ -38,7 +43,7 @@ a {
 }
 
 .row {
-  padding-left: 4rem;
+  padding-left: 1rem;
   padding-top: 2rem
 }
 

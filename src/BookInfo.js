@@ -71,7 +71,7 @@ console.log("component will unmount");
           <br />
            by <b>  {authors} </b> <strong>Average Rating : </strong> {this.state.avg_rating}
           <br /><br/>
-          <div dangerouslySetInnerHTML={{ __html: this.state.description }} />
+          <div className="bookDescription" dangerouslySetInnerHTML={{ __html: this.state.description }} />
 
         </div>
     </div>
