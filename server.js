@@ -4,10 +4,13 @@ const cors = require("cors");
 var xml2js = require('xml2js');
 var parser = new xml2js.Parser();
 var request = require('sync-request');
+import config from './config';
 
 const server = express();
 
-server.listen(3001);
+server.listen(config.port,  () => {
+  console.log("Express listening on port : ", config.port);
+});
 
 
 console.log("server is on and listening on port 3001");
