@@ -9,8 +9,8 @@ export const logStars = function(message) {
 };
 
 export default {
-  port: env.PORT || 3001,
-  host: env.HOST || '0.0.0.0',
+  port: nodeEnv.PORT || 3001,
+  host: nodeEnv.HOST || '0.0.0.0',
   get serverUrl() {
     return `http://${this.host}:${this.port}`;
   }
